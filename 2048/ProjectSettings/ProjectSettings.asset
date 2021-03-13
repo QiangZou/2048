@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: cacb2e2c7c66d7b45a90d76b70705cc0
+  productGUID: 515518f4663c9db419022a2ad9355b63
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -634,8 +634,8 @@ PlayerSettings:
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: e76b4b9e-d4cc-4080-9b99-28c242fc090e
-  projectName: 2048
+  cloudProjectId: b554fa07-3fd8-40c4-a142-6119eac5667a
+  projectName: 2048 (1)
   organizationId: qiangzou
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
