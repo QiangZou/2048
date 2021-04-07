@@ -1,41 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using ZQFramwork;
 
-public class Game2048View : BaseView
+public class Game2048View : BaseMainView
 {
     public int[] chess_0;
     public int[,] allChess;
 
+    public Text textBaseScore;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        Debug.Log(transform.name + " Awake222");
+    }
+
     // Use this for initialization
     protected override void Start()
     {
-        Debug.Log("123");
-        //
+        UpdateView();
     }
 
-    protected override void Update()
+
+    private void UpdateView()
     {
-        base.Update();
+        //设置最高分
+        //设置当前分
+        textBaseScore.text = (model.BaseViewData as Game2048ViewData).baseScore.ToString();
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Debug.Log("您按下了W键");
-        }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Debug.Log("您按下了S键");
 
-        }
-        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Debug.Log("您按下了A键");
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Debug.Log("您按下了D键");
-        }
     }
 
 
