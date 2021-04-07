@@ -6,9 +6,6 @@ using ZQFramwork;
 
 public class Game2048View : BaseMainView
 {
-    public int[] chess_0;
-    public int[,] allChess;
-
     public Text textBaseScore;
 
     protected override void Awake()

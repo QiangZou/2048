@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114436637072222906, guid: ce932bd94888d2b44b982c90601d85b5,
+        type: 2}
+      propertyPath: chess_0.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4600714532229132, guid: ce932bd94888d2b44b982c90601d85b5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
