@@ -7,11 +7,13 @@ using ZQFramwork;
 public class Game2048View : BaseMainView
 {
     public Text textBaseScore;
+    public Game2048Chessboard chessboard;
+
 
     protected override void Awake()
     {
         base.Awake();
-        Debug.Log(transform.name + " Awake222");
+        //Debug.Log(transform.name + " Awake222");
     }
 
     // Use this for initialization
@@ -30,6 +32,5 @@ public class Game2048View : BaseMainView
 
     }
 
-
-
+    
 }

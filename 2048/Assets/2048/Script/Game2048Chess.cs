@@ -1,21 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using ZQFramwork;
 
-public class Game2048Chess
+public class Game2048Chess : BaseView
 {
-    /// <summary>
-    /// 位置
-    /// </summary>
-    public Vector2Int position;
+    public Text text;
+
+
     /// <summary>
     /// 值
     /// </summary>
     public Game2048ChessType value;
+    public bool isMerge = false;
 
-    public Game2048Chess(Vector2Int position, Game2048ChessType value)
+    public void Init(Game2048ChessType value)
     {
-        this.position = position;
         this.value = value;
+
+        text.text = ((int)value).ToString();
+
+
+        iTween.ScaleFrom(gameObject, new Vector3(0.2f, 0.2f, 1f), 0.4f);
+    }
+
+    public void Movie(Game2048ChessType value)
+    {
+        this.value = value;
+    }
+
+    public void Movie(Transform position)
+    {
+        Movie(position.position);
+    }
+
+    public void Movie(Vector3 position)
+    {
+        iTween.MoveTo(gameObject, position, 0.4f);
+        VPTimer.In(0.4f, () =>
+        {
+            text.text = ((int)value).ToString();
+        });
+    }
+
+    public override string ToString()
+    {
+        return ((int)value).ToString();
     }
 }
